@@ -21,7 +21,7 @@ public class App2 {
         }
     
         String input = con.readLine("What is your hobby? \n");
-        input.trim();
+        input = input.trim();
         if (input.equals("swim")){           
                 System.out.println("Swimmy yay");
         }  
@@ -29,16 +29,58 @@ public class App2 {
                 System.out.println("Joggy yay");
 
             }
-            else if (input.equals("walk")){
-                System.out.println("Walky yay");
+            else if (input.equals("cycle")){
+                System.out.println("Cycley yay");
                 
 
             }
             else {
-                System.out.println("boring");
+                System.out.println("boring! ");
             }
+        
+
+
+        // Switch statement
+        switch(input) {
+            case "swim":
+                System.out.println("The nearest swimming pool is Clementi. ");
+            break;
+
+            case "jog":
+            System.out.println("The nearest park is West Coast Park. ");
+            break;
+
+            case "cycle":
+            System.out.println("You could cycle along the PCN. ");
+            break;
+
+            default:
+            System.out.println("Sounds like you are a boring person without a hobby. ");
+            break;
+
         }
 
+        Integer myAge = 0;
+        String inputAge = con.readLine("What is your age?");
 
-    
+        myAge = Integer.parseInt(inputAge);
+
+        if (myAge >= 0 && myAge <= 2) {
+            System.out.println("You are a baby. ");
+        }
+        else if (myAge >= 2 && myAge <= 4) {
+            System.out.println("You are a toddler. ");
+        }
+        else if (myAge >= 4 && myAge <= 12) {
+            System.out.println("You are a child. ");
+        }
+        else if (myAge >= 12 && myAge <= 19) {
+            System.out.println("You are a teen. ");
+        }
+        else {
+            System.out.println("You are an adult. ");
+        }
+
+}
+
 }
